@@ -9,7 +9,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Clone the repo directly (alternative to COPY)
-RUN git clone https://github.com/Booza1981/iptv_logo_updater.git . || echo "Using build context instead"
+RUN git clone https://github.com/Booza1981/iptv-stack.git . || echo "Using build context instead"
 
 # If cloning fails, copy from build context
 COPY requirements.txt .
